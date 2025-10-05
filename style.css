@@ -197,6 +197,12 @@
   background-position: center bottom;
 }
 
+@media (max-width: 768px) {
+.hero-text .highlight::after {
+    background-image: none;
+   /* optional fallback color */
+  }
+}
 .hero-text p {
   font-size: 1.1rem;
   line-height: 1.6;
@@ -320,9 +326,54 @@
   }
 }
 
+@media (max-width: 992px) {
+  .hero .container.hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text .highlight::after {
+    background-image: none;
+  }
+
+  .hero-text {
+    margin-bottom: 50px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-image {
+    max-width: 80%;
+  }
+
+  .rating-box {
+    bottom: 40%;
+    left: 0;
+    transform: translateY(50%);
+    right: auto;
+  }
+
+  .resume-box {
+    bottom: 5%;
+    right: 0;
+    transform: none;
+    left: auto;
+  }
+}
+
 @media (max-width: 768px) {
   .hero-text h1 {
     font-size: 2.5rem;
+  }
+
+  .hero-text .highlight::after {
+    background-image: none;
+  }
+
+  .hero{
+    padding-bottom: 50px;
   }
 
   .hero-text p {
@@ -341,21 +392,22 @@
   }
 
   .rating-box {
-    left: 10%;
-    top: -30px;
-    bottom: auto;
-    transform: translateX(-50%);
+    bottom: 35%;
+    left: 0%;
+    transform: translateY(50%);
+    right: auto;
   }
 
   .resume-box {
-    right: 10%;
-    bottom: -30px;
-    transform: translateX(50%);
+    bottom: 5%;
+    right: 0%;
+    transform: none;
+    left: auto;
   }
 
   .rating-box img,
   .resume-box img {
-    max-width: 200px;
+    max-width: 180px;
   }
 }
 
@@ -364,9 +416,26 @@
     font-size: 2rem;
   }
 
-  .rating-box,
+  .hero{
+    padding-bottom: 50px;
+  }
+
+  .rating-box {
+    width: 180px;
+    height: 64px;
+    left: -15%;
+  }
+
   .resume-box {
-    display: none;
+    width: 180px;
+    height: 64px;
+    right: -10%;
+    top: 80%;
+  }
+
+  .hero-image {
+    max-width: 336;
+    height: 366px;
   }
 }
 
@@ -447,7 +516,9 @@
   line-height: 1.6;
   padding-top: 10px;
 }
-
+.diff {
+    color: #FA1239;
+}
 /* --- Responsive CSS--- */
 
 @media (max-width: 992px) {

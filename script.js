@@ -62,6 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".sidebar-links a").forEach(link => {
     link.addEventListener("click", () => {
       sidebar.classList.remove("active");
-    });
+    })
   });
 });
